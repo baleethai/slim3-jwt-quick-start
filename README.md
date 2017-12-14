@@ -12,9 +12,4 @@ Run this command from the directory in which you want to install your new Slim F
 
 * Point your virtual host document root to your new application's `public/` directory.
 
-Also run this command.
-
-```composer update```
-
-
 That's it! Now go build something cool.
