@@ -1,0 +1,31 @@
+{
+    "name": "jonatanflores/slim3-jwt-quick-start",
+    "description": "skeleton application to quickly setup and start working on a new Slim Framework 3 and JWT authentication",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonatan Flores",
+            "email": "jonatafloress@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "slim/slim": "^3.0",
+        "illuminate/database": "^5.5",
+        "respect/validation": "^1.1",
+        "firebase/php-jwt": "^5.0",
+        "tuupola/slim-jwt-auth": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('./config/development.php') || copy('./config/development.default.php', './config/development.php');\"",
+            "php -r \"file_exists('./config/production.php') || copy('./config/production.default.php', './config/production.php');\""
+        ]
+    }
+}
